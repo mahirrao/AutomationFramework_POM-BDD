@@ -39,7 +39,8 @@ public class CRMHeaders
 			(ExpectedConditions.presenceOfElementLocated
 					(Page.getElement("accountsHiddenPath_CSS")));
 
-			Page.click("accountsHiddenPath_CSS");			
+			Page.click("accountsHiddenPath_CSS");		
+			Page.log.debug("Logging in the hidden menu");
 		}
 		else
 		Page.click("accountsPath_CSS");
