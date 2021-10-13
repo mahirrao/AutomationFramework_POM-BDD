@@ -1,0 +1,12 @@
+DEBUG   2021-10-12 21:31:48,716 [main] mayureshLogger  - Config File Loaded
+DEBUG   2021-10-12 21:31:48,718 [main] mayureshLogger  - Object Repository file loaded
+INFO    2021-10-12 21:31:52,689 [main] mayureshLogger  - Chrome browser launched
+DEBUG   2021-10-12 21:32:32,458 [main] mayureshLogger  - Clicking on an Element : loginLink_CSS
+DEBUG   2021-10-12 21:32:42,608 [main] mayureshLogger  - Typing in an Element : userName_CSS entered value as : md.ahirrao@gmail.com
+DEBUG   2021-10-12 21:32:42,687 [main] mayureshLogger  - Clicking on an Element : getPasswordbutton_CSS
+DEBUG   2021-10-12 21:32:47,826 [main] mayureshLogger  - Typing in an Element : password_CSS entered value as : Pratapgad10November
+DEBUG   2021-10-12 21:32:47,877 [main] mayureshLogger  - Clicking on an Element : loginButton_CSS
+DEBUG   2021-10-12 21:33:27,309 [main] mayureshLogger  - Clicking on an Element : CRMpage_CSS
+DEBUG   2021-10-12 21:33:27,422 [main] mayureshLogger  - Clicking on an Element : accountsPath_CSS
+DEBUG   2021-10-12 21:33:28,636 [main] mayureshLogger  - Clicking on an Element : CreateAccountsButton_CSS
+DEBUG   2021-10-12 21:33:30,713 [main] mayureshLogger  - Typing in an Element : accountName_CSS entered value as : Ahirrao
