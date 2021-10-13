@@ -12,7 +12,7 @@ public class BaseTest
 	@AfterSuite
 	public void tearDown()
 	{
-//		Page.quit();		
+		Page.quit();		
 	}
 	
 }
