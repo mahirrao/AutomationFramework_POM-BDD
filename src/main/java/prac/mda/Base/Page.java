@@ -143,7 +143,7 @@ public class Page
 	private void launchFirefoxBrowser()
 	{
 		System.setProperty("webdriver.gecko.driver",
-				baseDir + "\\src\\test\\resources\\WebDriverExecutables\\geckodriver.exe");
+				baseDir + execDir + "geckodriver.exe");
 		driver = new FirefoxDriver();
 		log.info("Firefox browser launched");
 	}
@@ -151,7 +151,7 @@ public class Page
 	private void launchIEbrowser()
 	{
 		System.setProperty("webdriver.ie.driver",
-				baseDir + "\\src\\test\\resources\\WebDriverExecutables\\IEDriverServer.exe");
+				baseDir + execDir + "IEDriverServer.exe");
 		driver = new InternetExplorerDriver();
 		log.info("IE browser launched");
 	}
