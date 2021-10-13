@@ -184,11 +184,12 @@ public class Page
 	
 	//Methods Library
 	
-		public static boolean isElementPresent(By locator)
+		public static boolean isElementPresent(String locator)
 		{
+			By elementLocator =  getElement(locator);
 			try 
 			{
-				driver.findElement(locator);
+				driver.findElement(elementLocator);
 				return true;
 			} 
 			catch (NoSuchElementException e)
@@ -257,29 +258,30 @@ public class Page
 	}
 	
 	public static void click(String locator) {
+		By elementLocator =  getElement(locator);
 
-		if (locator.endsWith("_CSS")) {
-			driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
-		} else if (locator.endsWith("_XPATH")) {
-			driver.findElement(By.xpath(OR.getProperty(locator))).click();
-		} else if (locator.endsWith("_ID")) {
-			driver.findElement(By.id(OR.getProperty(locator))).click();
-		}
+		driver.findElement(elementLocator).click();
 		log.debug("Clicking on an Element : "+locator);
 		testReport.get().log(Status.INFO, "Clicking on : " + locator);
 //		test.log(LogStatus.INFO, "Clicking on : " + locator);
 	}
 
-	public static void type(String locator, String value) {
-
+	public static By getElement(String locator)
+	{
 		if (locator.endsWith("_CSS")) {
-			driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+			return By.cssSelector(OR.getProperty(locator));
 		} else if (locator.endsWith("_XPATH")) {
-			driver.findElement(By.xpath(OR.getProperty(locator))).sendKeys(value);
+			return By.xpath(OR.getProperty(locator));
 		} else if (locator.endsWith("_ID")) {
-			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
+			return By.id(OR.getProperty(locator));
 		}
+		return null;
+	}
 
+	public static void type(String locator, String value) {
+		By elementLocator =  getElement(locator);
+
+		driver.findElement(elementLocator).sendKeys(value);
 		log.debug("Typing in an Element : "+locator+" entered value as : "+value);
 		testReport.get().log(Status.INFO, "Typing in : " + locator + " entered value as " + value);
 		
